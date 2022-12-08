@@ -1,5 +1,5 @@
 import '../../assets/index.less';
-import 'rc-dialog/assets/index.css';
+// import 'rc-dialog/assets/index.css';
 
 import Dialog from 'rc-dialog';
 import React from 'react';

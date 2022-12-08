@@ -108,7 +108,7 @@ class Combobox extends React.Component {
             allowClear
             placeholder="please input, max len: 10"
             value={value}
-            maxLength={10}
+            // maxLength={10}
             mode="combobox"
             backfill
             onFocus={() => console.log('focus')}

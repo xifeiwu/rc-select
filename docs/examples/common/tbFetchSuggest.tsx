@@ -1,5 +1,4 @@
 import jsonp from 'jsonp';
-import querystring from 'querystring';
 
 let timeout;
 let currentValue;
@@ -12,10 +11,7 @@ export function fetch(value, callback) {
   currentValue = value;
 
   function fake() {
-    const str = querystring.encode({
-      code: 'utf-8',
-      q: value,
-    });
+    const str = `code=utf-8&q=${encodeURIComponent(value)}`;
     jsonp(`http://suggest.taobao.com/sug?${str}`, (err, d) => {
       if (currentValue === value) {
         const { result } = d;
